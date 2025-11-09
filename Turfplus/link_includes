@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+while [[ $# -gt 0 ]]; do
+
+	file="$1"
+	shift
+	hfile=`find /home/farouk/git/qt -type f -name $file` 
+	if [[ -z "$hfile" ]]; then
+		echo "header file $file nout found"
+		continue
+	fi
+	ln -s $hfile $file
+	echo "file $hfile linked in $PWD. consider removing path prefixes"
+
+done

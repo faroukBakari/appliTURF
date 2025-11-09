@@ -1,0 +1,3 @@
+SET SQL_SAFE_UPDATES = 0;
+SHOW VARIABLES LIKE "secure_file_priv";
+
